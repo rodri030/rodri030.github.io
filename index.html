@@ -1,0 +1,1054 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Cureño Consultores Patrimoniales | Asesoría en seguros</title>
+<meta name="description" content="Cureño Consultores Patrimoniales: asesoría en gastos médicos, seguro de vida, seguro de auto y ahorro/patrimonio.">
+
+<style>
+:root{
+--bg:#f7f9fc;
+--card:#fff;
+--tx:#12263f;
+--mut:#5b6b80;
+--pri:#0b5cad;
+--pri2:#e8f1fb;
+--acc:#f4a623;
+--bd:#dde5ef;
+--ft:#0d2440;
+--wa:#1faa59
+}
+
+@media (prefers-color-scheme:dark){
+:root:not([data-theme="light"]){
+--bg:#0c1522;
+--card:#142238;
+--tx:#e8eef7;
+--mut:#9fb0c6;
+--pri:#5aa6f0;
+--pri2:#173254;
+--bd:#233650;
+--ft:#08111d
+}
+}
+
+*{box-sizing:border-box}
+
+html{
+scroll-behavior:smooth;
+scroll-padding-top:72px
+}
+
+body{
+margin:0;
+background:var(--bg);
+color:var(--tx);
+font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+line-height:1.6
+}
+
+a{
+color:inherit;
+text-decoration:none
+}
+
+.wrap{
+max-width:1100px;
+margin:auto;
+padding:0 20px
+}
+
+header{
+position:sticky;
+top:0;
+background:var(--card);
+border-bottom:1px solid var(--bd);
+z-index:20
+}
+
+nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+height:64px
+}
+
+.logo{
+font-weight:800;
+font-size:1.05rem;
+color:var(--pri);
+display:flex;
+gap:8px;
+align-items:center;
+line-height:1.1
+}
+
+.menu{
+display:flex;
+gap:20px;
+align-items:center
+}
+
+.menu a:not(.btn){
+color:var(--mut);
+font-weight:500;
+font-size:.95rem
+}
+
+.menu a:not(.btn):hover{
+color:var(--pri)
+}
+
+.btn{
+display:inline-block;
+background:var(--pri);
+color:#fff;
+border:0;
+padding:12px 22px;
+border-radius:10px;
+font-weight:600;
+cursor:pointer;
+font-size:1rem;
+font-family:inherit
+}
+
+.btn:hover{
+filter:brightness(1.1)
+}
+
+.btn.alt{
+background:var(--acc);
+color:#1b1300
+}
+
+.btn.wa{
+background:var(--wa);
+color:#fff
+}
+
+.btn.line{
+background:transparent;
+border:2px solid #fff;
+color:#fff
+}
+
+.btn.soft{
+background:var(--pri2);
+color:var(--pri)
+}
+
+#burger{
+display:none;
+background:none;
+border:0;
+font-size:1.6rem;
+color:var(--tx);
+cursor:pointer
+}
+
+.hero{
+background:linear-gradient(135deg,#0b3d75,#0b5cad);
+color:#fff;
+padding:90px 0
+}
+
+.hero h1{
+font-size:clamp(2rem,5vw,3.3rem);
+margin:0 0 14px;
+line-height:1.15
+}
+
+.hero p{
+max-width:600px;
+font-size:1.1rem;
+opacity:.93
+}
+
+.row{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:26px
+}
+
+section{
+padding:70px 0
+}
+
+h2{
+font-size:clamp(1.6rem,3.5vw,2.1rem);
+margin:0 0 8px
+}
+
+.sub{
+color:var(--mut);
+margin:0 0 34px;
+max-width:680px
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:20px
+}
+
+.card{
+background:var(--card);
+border:1px solid var(--bd);
+border-radius:14px;
+padding:24px
+}
+
+.card .ic{
+font-size:2rem;
+background:var(--pri2);
+width:56px;
+height:56px;
+border-radius:14px;
+display:grid;
+place-items:center;
+margin-bottom:12px
+}
+
+.card h3{
+margin:0 0 6px
+}
+
+.card p{
+color:var(--mut);
+margin:0 0 14px;
+font-size:.95rem
+}
+
+.link{
+color:var(--pri);
+font-weight:600;
+background:none;
+border:0;
+padding:0;
+cursor:pointer;
+font-size:.95rem;
+font-family:inherit
+}
+
+.alt-bg{
+background:var(--pri2)
+}
+
+.step .num{
+width:40px;
+height:40px;
+border-radius:50%;
+background:var(--pri);
+color:#fff;
+display:grid;
+place-items:center;
+font-weight:700;
+margin-bottom:12px
+}
+
+.note{
+font-size:.85rem;
+color:var(--mut);
+margin-top:24px
+}
+
+details{
+background:var(--card);
+border:1px solid var(--bd);
+border-radius:12px;
+padding:14px 18px;
+margin-bottom:12px;
+max-width:820px
+}
+
+summary{
+cursor:pointer;
+font-weight:600
+}
+
+details p{
+color:var(--mut);
+margin:10px 0 0
+}
+
+footer{
+background:var(--ft);
+color:#b8c6da;
+padding:50px 0 24px
+}
+
+footer .grid{
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr))
+}
+
+footer h4{
+color:#fff;
+margin:0 0 10px
+}
+
+footer a,
+footer .ln{
+display:block;
+padding:3px 0;
+color:#b8c6da;
+text-decoration:none;
+text-align:left
+}
+
+footer a:hover,
+footer .ln:hover{
+color:#fff
+}
+
+.copy{
+border-top:1px solid #ffffff22;
+margin-top:30px;
+padding-top:16px;
+font-size:.82rem
+}
+
+dialog{
+border:0;
+border-radius:16px;
+padding:28px;
+max-width:600px;
+width:calc(100% - 32px);
+max-height:88vh;
+overflow:auto;
+background:var(--card);
+color:var(--tx)
+}
+
+dialog::backdrop{
+background:#000a
+}
+
+dialog h4{
+margin:16px 0 4px;
+color:var(--pri)
+}
+
+dialog ul{
+padding-left:20px;
+color:var(--mut);
+margin:0
+}
+
+dialog p{
+color:var(--mut);
+margin:0
+}
+
+.dnote{
+font-size:.82rem;
+margin-top:16px!important
+}
+
+@media(max-width:760px){
+
+#burger{
+display:block
+}
+
+.menu{
+display:none;
+position:absolute;
+top:64px;
+left:0;
+right:0;
+background:var(--card);
+flex-direction:column;
+align-items:flex-start;
+padding:20px;
+border-bottom:1px solid var(--bd);
+gap:16px
+}
+
+.menu.open{
+display:flex
+}
+
+section{
+padding:52px 0
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div class="wrap">
+<nav>
+
+<a class="logo" href="#inicio">
+🛡️ Cureño Consultores<br>
+Patrimoniales
+</a>
+
+<button id="burger" aria-label="Abrir menú">☰</button>
+
+<div class="menu" id="menu">
+
+<a href="#inicio">Inicio</a>
+<a href="#seguros">Seguros</a>
+<a href="#como">Cómo te ayudamos</a>
+<a href="#faq">Preguntas</a>
+
+</div>
+
+</nav>
+</div>
+</header>
+
+
+<main>
+
+<section class="hero" id="inicio">
+<div class="wrap">
+
+<h1>Protege lo que más importa</h1>
+
+<p>
+En Cureño Consultores Patrimoniales te orientamos para elegir un seguro acorde a tu salud, tu familia, tu vehículo y tu patrimonio.
+</p>
+
+<div class="row">
+
+<a
+data-wa="Hola, me gustaría recibir información sobre seguros con Cureño Consultores Patrimoniales."
+class="btn line"
+target="_blank"
+rel="noopener"
+href="https://wa.me/529981553977">
+Escribir por WhatsApp
+</a>
+
+</div>
+
+</div>
+</section>
+
+
+<section id="seguros">
+<div class="wrap">
+
+<h2>Nuestros seguros</h2>
+
+<p class="sub">
+Conoce las opciones en las que podemos orientarte. Haz clic en “Más información” para ver características generales, posibles beneficios y aspectos a considerar.
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<div class="ic">🏥</div>
+
+<h3>Gastos Médicos</h3>
+
+<p>
+Apoyo económico ante enfermedades o accidentes que requieren atención médica u hospitalaria.
+</p>
+
+<button class="link" data-s="gm">
+Más información →
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="ic">👨‍👩‍👧</div>
+
+<h3>Seguro de Vida</h3>
+
+<p>
+Respaldo económico para tus beneficiarios en caso de fallecimiento del asegurado.
+</p>
+
+<button class="link" data-s="vida">
+Más información →
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="ic">🚗</div>
+
+<h3>Seguro de Auto</h3>
+
+<p>
+Protección para tu vehículo y para posibles daños a terceros, según el tipo de cobertura.
+</p>
+
+<button class="link" data-s="auto">
+Más información →
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="ic">💰</div>
+
+<h3>Ahorro / Patrimonio</h3>
+
+<p>
+Opciones para construir un fondo para metas como retiro o educación, a mediano y largo plazo.
+</p>
+
+<button class="link" data-s="ahorro">
+Más información →
+</button>
+
+</div>
+
+</div>
+
+<p class="note">
+La información es general y orientativa. Las coberturas, costos, exclusiones y condiciones dependen de la aseguradora y del plan que se contrate.
+</p>
+
+</div>
+</section>
+
+
+<section class="alt-bg" id="como">
+
+<div class="wrap">
+
+<h2>¿Cómo te ayudamos?</h2>
+
+<p class="sub">
+Un proceso sencillo, en tres pasos.
+</p>
+
+<div class="grid">
+
+
+<div class="card step">
+
+<div class="num">1</div>
+
+<h3>Conocemos tus necesidades</h3>
+
+<p>
+Platicamos contigo para entender tu situación, tus prioridades y lo que quieres proteger.
+</p>
+
+</div>
+
+
+<div class="card step">
+
+<div class="num">2</div>
+
+<h3>Te presentamos alternativas</h3>
+
+<p>
+Te explicamos las opciones disponibles, sus características y lo que conviene revisar de cada una.
+</p>
+
+</div>
+
+
+<div class="card step">
+
+<div class="num">3</div>
+
+<h3>Te acompañamos en la contratación</h3>
+
+<p>
+Resolvemos tus dudas y te apoyamos durante el proceso si decides contratar.
+</p>
+
+</div>
+
+
+</div>
+</div>
+</section>
+
+
+<section id="motivos">
+
+<div class="wrap">
+
+<h2>Motivos para contactarnos</h2>
+
+<p class="sub">
+Una asesoría pensada para que tomes decisiones informadas.
+</p>
+
+<div class="grid">
+
+
+<div class="card">
+
+<h3>🤝 Asesoría personalizada</h3>
+
+<p>
+Cada persona y familia tiene necesidades distintas; la orientación parte de las tuyas.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🗣️ Explicaciones claras</h3>
+
+<p>
+Te explicamos los conceptos importantes, como deducible, coaseguro o exclusiones, en lenguaje sencillo.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🧭 Acompañamiento</h3>
+
+<p>
+Te acompañamos desde tu primera consulta hasta la contratación.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>💬 Contacto a tu manera</h3>
+
+<p>
+Elige si prefieres llamada, WhatsApp o correo electrónico.
+</p>
+
+</div>
+
+
+</div>
+</div>
+</section>
+
+
+<section id="faq">
+
+<div class="wrap">
+
+<h2>Preguntas frecuentes</h2>
+
+<p class="sub">
+Respuestas rápidas a las dudas más comunes.
+</p>
+
+
+<details>
+
+<summary>
+¿Cómo solicito una cotización?
+</summary>
+
+<p>
+Escríbenos por WhatsApp indicando el seguro que te interesa. Con esa información se puede iniciar la orientación y preparar alternativas.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+¿Qué información necesito para cotizar?
+</summary>
+
+<p>
+Como mínimo, tu nombre, un medio de contacto y el tipo de seguro de interés. Después, según el seguro, pueden pedirte datos adicionales (por ejemplo, datos de las personas a asegurar o del vehículo). Los requisitos exactos pueden variar según la aseguradora y el plan.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+¿Solicitar información me obliga a contratar?
+</summary>
+
+<p>
+Enviar un mensaje es una solicitud de información. La decisión de contratar es tuya y requiere que revises y aceptes las condiciones de la póliza.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+¿Cómo puedo ponerme en contacto?
+</summary>
+
+<p>
+Puedes comunicarte por WhatsApp, teléfono o correo electrónico utilizando los datos de contacto que aparecen al final de esta página.
+</p>
+
+</details>
+
+
+</div>
+</section>
+
+</main>
+
+
+<footer>
+
+<div class="wrap">
+
+<div class="grid">
+
+
+<div>
+
+<h4>
+🛡️ Cureño Consultores Patrimoniales
+</h4>
+
+<p>
+Asesoría en seguros y planeación patrimonial.
+</p>
+
+</div>
+
+
+<div>
+
+<h4>Navegación</h4>
+
+<a href="#inicio">Inicio</a>
+<a href="#seguros">Seguros</a>
+<a href="#como">Cómo te ayudamos</a>
+<a href="#faq">Preguntas frecuentes</a>
+
+</div>
+
+
+<div>
+
+<h4>Seguros</h4>
+
+<a href="#seguros" data-s="gm">
+Gastos Médicos
+</a>
+
+<a href="#seguros" data-s="vida">
+Seguro de Vida
+</a>
+
+<a href="#seguros" data-s="auto">
+Seguro de Auto
+</a>
+
+<a href="#seguros" data-s="ahorro">
+Ahorro / Patrimonio
+</a>
+
+</div>
+
+
+<div>
+
+<h4>Contacto</h4>
+
+<a id="ftel" href="tel:+529981553977">
+📞 998 155 3977
+</a>
+
+<a id="fmail" href="mailto:cureger@gmail.com">
+✉️ cureger@gmail.com
+</a>
+
+<a
+data-wa="Hola, me gustaría recibir información sobre seguros con Cureño Consultores Patrimoniales."
+href="https://wa.me/529981553977"
+target="_blank"
+rel="noopener">
+💬 WhatsApp
+</a>
+
+</div>
+
+
+</div>
+
+
+<div class="copy">
+
+© 2026 Cureño Consultores Patrimoniales.
+Información general; no constituye oferta ni contrato de seguro.
+
+<a href="#inicio" style="display:inline">
+Volver arriba ↑
+</a>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<dialog id="d">
+
+<h3 id="dt" style="margin-top:0"></h3>
+
+<div id="db"></div>
+
+<p class="dnote">
+Información general y orientativa. Las coberturas, costos y condiciones dependen de la aseguradora y del plan elegido; revisa siempre las condiciones de la póliza.
+</p>
+
+<div class="row" style="margin-top:18px">
+
+<a
+class="btn wa"
+id="dwa"
+target="_blank"
+rel="noopener"
+href="https://wa.me/529981553977">
+WhatsApp
+</a>
+
+<button class="btn soft" data-close>
+Cerrar
+</button>
+
+</div>
+
+</dialog>
+
+
+<script>
+
+/* ===== CONFIGURACIÓN ===== */
+
+const WA_NUM="529981553977";
+
+const PHONE="+529981553977";
+
+const EMAIL="cureger@gmail.com";
+
+/* ========================= */
+
+const $=id=>document.getElementById(id);
+
+const wa=t=>"https://wa.me/"+WA_NUM+"?text="+encodeURIComponent(t);
+
+
+const S={
+
+gm:{
+t:"Gastos Médicos",
+
+d:"Seguro que ayuda a afrontar gastos por enfermedades o accidentes, como hospitalización, cirugías, honorarios médicos y medicamentos, según lo que establezca cada póliza.",
+
+c:[
+"Suele definirse una suma asegurada, un deducible y un coaseguro",
+"Puede haber una red de hospitales y médicos a elegir",
+"Algunos planes incluyen o excluyen ciertos servicios, como maternidad",
+"Pueden existir periodos de espera o exclusiones"
+],
+
+b:[
+"Reducir el impacto económico de un evento de salud importante",
+"Acceso a atención en los hospitales que contemple el plan",
+"Planear con anticipación los gastos médicos de ti y tu familia"
+],
+
+k:[
+"Monto del deducible y porcentaje de coaseguro",
+"Padecimientos preexistentes y declaración veraz de tu estado de salud",
+"Exclusiones, periodos de espera y red de hospitales",
+"Cómo puede cambiar el costo con los años o al renovar"
+]
+},
+
+
+vida:{
+t:"Seguro de Vida",
+
+d:"Seguro que entrega una suma de dinero a los beneficiarios que designes si ocurre el fallecimiento del asegurado, conforme a las condiciones de la póliza.",
+
+c:[
+"Existen esquemas temporales (por un plazo) y de mayor duración",
+"La suma asegurada se define al contratar",
+"Puedes designar beneficiarios",
+"Algunos planes permiten agregar protecciones adicionales, según el producto"
+],
+
+b:[
+"Ayudar a que tu familia mantenga su estabilidad económica",
+"Apoyar el pago de deudas, gastos del hogar o estudios de los hijos",
+"Dejar un respaldo definido a las personas que elijas"
+],
+
+k:[
+"Cuánto necesitarían tus dependientes y por cuánto tiempo",
+"Plazo, costo y forma de pago del plan",
+"Exclusiones y requisitos de contratación",
+"Mantener actualizados a tus beneficiarios"
+]
+},
+
+
+auto:{
+t:"Seguro de Auto",
+
+d:"Seguro que protege tu vehículo y, según la cobertura contratada, los daños que puedas causar a terceros.",
+
+c:[
+"Hay coberturas de distintos alcances, desde responsabilidad civil hasta coberturas más amplias",
+"Puede considerar daños materiales, robo y responsabilidad civil, según el plan",
+"El monto y las condiciones dependen del vehículo y de la póliza",
+"Suele aplicarse un deducible en ciertos siniestros"
+],
+
+b:[
+"Reducir el costo de un accidente, daño o robo cubierto",
+"Contar con respaldo ante daños a terceros",
+"Cumplir con lo que requiera la normativa aplicable a tu vehículo"
+],
+
+k:[
+"Tipo de cobertura y a qué eventos aplica",
+"Deducibles y exclusiones",
+"Suma asegurada y cómo se valúa el vehículo",
+"Uso del vehículo (particular o de trabajo) y conductores habituales"
+]
+},
+
+
+ahorro:{
+t:"Ahorro / Patrimonio",
+
+d:"Opciones que ayudan a construir un fondo para metas como retiro, educación o proyectos personales, mediante aportaciones periódicas o únicas, según el producto.",
+
+c:[
+"Pueden combinar ahorro con protección, según el plan",
+"Se definen plazos y aportaciones al contratar",
+"Los rendimientos y beneficios dependen de cada producto; no siempre están garantizados",
+"Puede haber condiciones para retiros anticipados"
+],
+
+b:[
+"Crear el hábito de ahorrar con un objetivo definido",
+"Planear con tiempo el retiro o los estudios de tus hijos",
+"Contar con un fondo para el futuro, con o sin protección adicional"
+],
+
+k:[
+"Tu meta, el plazo y cuánto puedes aportar de forma constante",
+"Condiciones y posibles costos por retirar antes de tiempo",
+"Qué está garantizado y qué no",
+"Tratamiento fiscal aplicable a tu situación (consúltalo con un especialista)"
+]
+}
+
+};
+
+
+const li=a=>"<ul>"+a.map(i=>"<li>"+i+"</li>").join("")+"</ul>";
+
+let cur="gm";
+
+const d=$("d");
+
+
+function openS(k){
+
+cur=k;
+
+const x=S[k];
+
+$("dt").textContent=x.t;
+
+$("db").innerHTML=
+"<p>"+x.d+"</p>"+
+"<h4>Características generales</h4>"+
+li(x.c)+
+"<h4>Posibles beneficios</h4>"+
+li(x.b)+
+"<h4>Qué considerar antes de contratar</h4>"+
+li(x.k);
+
+$("dwa").href=
+wa("Hola, me gustaría recibir información sobre "+x.t+" con Cureño Consultores Patrimoniales.");
+
+d.showModal();
+
+}
+
+
+document.querySelectorAll("[data-s]").forEach(b=>
+b.addEventListener("click",e=>{
+e.preventDefault();
+openS(b.dataset.s);
+})
+);
+
+
+document.querySelectorAll("[data-close]").forEach(b=>
+b.onclick=()=>b.closest("dialog").close()
+);
+
+
+document.querySelectorAll("dialog").forEach(x=>
+x.addEventListener("click",e=>{
+if(e.target===x)x.close();
+})
+);
+
+
+document.querySelectorAll("[data-wa]").forEach(a=>
+a.href=wa(a.dataset.wa)
+);
+
+
+$("burger").onclick=()=>
+$("menu").classList.toggle("open");
+
+
+$("menu").querySelectorAll("a").forEach(a=>
+a.onclick=()=>
+$("menu").classList.remove("open")
+);
+
+
+if(EMAIL){
+
+$("fmail").href="mailto:"+EMAIL;
+
+$("fmail").textContent="✉️ "+EMAIL;
+
+}
+
+
+$("ftel").href="tel:"+PHONE;
+
+</script>
+
+</body>
+</html>
+```
